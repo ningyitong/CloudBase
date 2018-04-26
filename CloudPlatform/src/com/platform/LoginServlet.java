@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 
             response.sendRedirect("dashboard.jsp");
         } else {
-            String script = "<script>alert('Login failed! Please check your username or password!');location.href='login.jsp'</script>";
+            String script = "<script>alert('Login failed! Please check your username or password!');location.href='dashboard.jsp'</script>";
             response.getWriter().println(script);
         }
     }

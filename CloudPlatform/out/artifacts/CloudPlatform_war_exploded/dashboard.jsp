@@ -1,5 +1,6 @@
-<%
-	if (session.getAttribute("user")==null) {
-		response.sendRedirect("login.jsp");
-	}
-%>
+<jsp:include page="header.jsp"/>
+
+
+
+
+<jsp:include page="footer.jsp"/>

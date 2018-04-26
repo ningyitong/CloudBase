@@ -1,7 +1,15 @@
-<jsp:include page="header.jsp" />
-    <div class="row">
-		<div class="col-sm-4 col-sm-offset-6">
-            <div class="registration_form pull-right">
+<!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="signUpModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title text-center" id="myModalLabel">Sign Up</h4>
+            </div>
+            <div class="modal-body">
                 <form action="RegisterServlet" method="post" onsubmit="return registration(this);">
                     <head1>Sign Up</head1>
                     <div>
@@ -14,7 +22,7 @@
                         <input type="password" name="repassword" id="input_repassword" placeholder="Confirm Password" required>
                     </div>
                     <div>
-                        <input type="email" name="email" id="input_email" placeholder="University Email Address" required>
+                        <input type="email" name="email" id="input_email" placeholder="Email Address" required>
                     </div>
                     <select name="question" id="dropdown_btn">
                         <option value="1">Where were you born?</option>
@@ -29,8 +37,11 @@
                     </div>
                 </form>
                 <br>
-                Have an account? <a href="login.jsp">Sign In</a> here!
+                Have an account? <a data-dismiss="modal" data-toggle="modal" data-target="#signInModel">Sign In</a> here!
+            </div>
+            <div class="modal-footer" style="text-align:center;">
+                <button type="button" class="btn btn-default" id="modalCloseBtn" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-<jsp:include page="footer.jsp" />
+</div>
