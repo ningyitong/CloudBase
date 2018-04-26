@@ -31,7 +31,7 @@ public class RegisterServlet extends HttpServlet {
                 String script = "<script>alert('Registration Successful!');location.href='login.jsp'</script>";
                 response.getWriter().println(script);
             } else {
-                String script = "<script>alert('Register failed! The USERNAME is already existed.');location.href='registration.jsp'</script>";
+                String script = "<script>alert('Register failed! The USERNAME is already existed.');location.href='register.jsp'</script>";
                 response.getWriter().println(script);
             }
         }
