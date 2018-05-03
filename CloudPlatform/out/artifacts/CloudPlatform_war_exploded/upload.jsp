@@ -8,8 +8,9 @@
 %>
 
 <div class="container" style="margin-left: 80px; margin-right: 80px">
-    <div style="margin-top: 80px">
-        <h3>Upload your own app here.</h3>
+    <div style="margin-top: 120px">
+        <h3>Upload your own app</h3>
+        <hr>
     </div>
     <form id="upload_app_form" name="uploadAppForm" onsubmit="return ValidateUploadForm(this);" method="post" action="UploadServlet" enctype="multipart/form-data">
         <input type="text" class="upload_input" name="title" placeholder=" Your APP Title   *" required/>

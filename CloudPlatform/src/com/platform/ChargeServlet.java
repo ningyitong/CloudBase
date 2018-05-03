@@ -25,8 +25,7 @@ public class ChargeServlet extends HttpServlet {
         String appUser_name = (String)session.getAttribute("username");
 
         // check user balance
-//        int app_price = Integer.parseInt(request.getParameter("app_price"));
-        int app_price = 22;
+        int app_price = Integer.parseInt(request.getParameter("app_price"));
         UserDao temp_appUser = new UserDao();
         User appUser_pre_account = temp_appUser.userInfo(appUser_name);
         if (appUser_pre_account.getBalance() >= app_price) {
@@ -40,8 +39,8 @@ public class ChargeServlet extends HttpServlet {
             // Charging APP owner peanut
             UserDao owner = new UserDao();
 
-//            User owner_account = owner.userInfo(app_owner);
-//            owner.creditBalance(app_owner, owner_account.getBalance() + charging_owner);
+            User owner_account = owner.userInfo(app_owner);
+            owner.creditBalance(app_owner, owner_account.getBalance() + charging_owner);
 
             // Charging platform owner
             UserDao platform_owner = new UserDao();

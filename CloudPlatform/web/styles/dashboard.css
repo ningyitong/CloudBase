@@ -23,7 +23,6 @@
     max-width: 200px;
 }
 
-.firstTitle {
-    margin-top: 180px;
-    padding-top: 100px;
+.invisible_input {
+    display: none;
 }

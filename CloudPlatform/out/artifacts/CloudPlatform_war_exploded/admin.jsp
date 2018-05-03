@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -12,9 +11,11 @@
         response.sendRedirect("dashboard.jsp");
     }
 %>>
+
 <div class="container" style="margin-left: 80px; margin-right: 80px">
-    <div style="margin-top: 80px">
+    <div style="margin-top: 100px">
         <h3>Manage Users and Apps</h3>
+        <hr>
     </div>
     <div class="container_table">
         <%
@@ -83,9 +84,8 @@
             %>
             </tbody>
         </table>
-        <br>
         <table class="table table-bordered table-hover table-striped" id="table">
-            <div>
+            <div style="margin-top: 30px">
                 <h4>APP List</h4>
             </div>
             <thead>

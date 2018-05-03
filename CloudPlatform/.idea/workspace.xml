@@ -20,82 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/account.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#form#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/upload.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-              <folding>
-                <element signature="e#168#213#0#HTML" expanded="true" />
-                <element signature="e#224#249#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/admin.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="e#466#511#0#HTML" expanded="true" />
-                <element signature="e#522#546#0#HTML" expanded="true" />
-                <element signature="e#1269#1293#0#HTML" expanded="true" />
-                <element signature="e#2235#2283#0#HTML" expanded="true" />
-                <element signature="e#2415#2436#0#HTML" expanded="true" />
-                <element signature="e#4236#4284#0#HTML" expanded="true" />
-                <element signature="e#4419#4440#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/styles/dashboard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManageServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/platform/ManageServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/platform/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/platform/AppDao.java">
+      <file leaf-file-name="ChargeServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/platform/ChargeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-552">
-              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+            <state relative-caret-position="-19">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,14 +41,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChargeServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/platform/ChargeServlet.java">
+      <file leaf-file-name="dashboard.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/dashboard.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="63" column="45" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="63" selection-end-column="45" />
+            <state relative-caret-position="119">
+              <caret line="38" column="100" selection-start-line="38" selection-start-column="100" selection-end-line="38" selection-end-column="100" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1295#1318#0#HTML" expanded="true" />
+                <element signature="e#1397#1422#0#HTML" expanded="true" />
+                <element signature="e#1482#1505#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/styles/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -159,6 +94,7 @@
       <find>model</find>
       <find>Model</find>
       <find>servlet</find>
+      <find>30px</find>
       <find>serv</find>
     </findStrings>
   </component>
@@ -180,8 +116,6 @@
         <option value="$PROJECT_DIR$/src/com/platform/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/src/com/platform/ResetPasswordServlet.java" />
         <option value="$PROJECT_DIR$/web/js/dashboard.js" />
-        <option value="$PROJECT_DIR$/web/dashboard.jsp" />
-        <option value="$PROJECT_DIR$/src/com/platform/ChargeServlet.java" />
         <option value="$PROJECT_DIR$/src/com/platform/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/com/platform/LoginServlet.java" />
         <option value="$PROJECT_DIR$/web/styles/upload.css" />
@@ -195,10 +129,12 @@
         <option value="$PROJECT_DIR$/src/com/platform/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/platform/ManageServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/styles/dashboard.css" />
+        <option value="$PROJECT_DIR$/web/admin.jsp" />
         <option value="$PROJECT_DIR$/web/upload.jsp" />
         <option value="$PROJECT_DIR$/web/account.jsp" />
-        <option value="$PROJECT_DIR$/web/admin.jsp" />
+        <option value="$PROJECT_DIR$/web/styles/dashboard.css" />
+        <option value="$PROJECT_DIR$/src/com/platform/ChargeServlet.java" />
+        <option value="$PROJECT_DIR$/web/dashboard.jsp" />
       </list>
     </option>
   </component>
@@ -454,15 +390,15 @@
       <workItem from="1524681730729" duration="9182000" />
       <workItem from="1524765306390" duration="2924000" />
       <workItem from="1524768768618" duration="1712000" />
-      <workItem from="1525262889687" duration="46997000" />
+      <workItem from="1525262889687" duration="48731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60815000" />
+    <option name="totallyTimeSpent" value="62549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="44" width="1425" height="776" extended-state="0" />
+    <frame x="19" y="50" width="1425" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -483,10 +419,10 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" sideWeight="0.4967462" weight="0.3298969" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.8040492" visible="true" weight="0.34020618" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.8040492" visible="true" weight="0.34020618" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49746928" weight="0.3298969" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4923077" visible="true" weight="0.2559653" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4923077" visible="true" weight="0.2559653" />
       <window_info id="Web" order="4" sideWeight="0.50769234" side_tool="true" weight="0.2559653" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" sideWeight="0.5066964" side_tool="true" weight="0.26067746" />
@@ -788,17 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="e#1295#1318#0#HTML" expanded="true" />
-            <element signature="e#1482#1505#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -811,16 +736,6 @@
         <state>
           <folding>
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/platform/ChargeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="63" column="45" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="63" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/platform/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="224" column="5" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -856,24 +764,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/platform/ManageServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/styles/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="118">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#466#511#0#HTML" expanded="true" />
+            <element signature="e#522#546#0#HTML" expanded="true" />
+            <element signature="e#1269#1293#0#HTML" expanded="true" />
+            <element signature="e#2235#2283#0#HTML" expanded="true" />
+            <element signature="e#2415#2436#0#HTML" expanded="true" />
+            <element signature="e#3250#3274#0#HTML" expanded="true" />
+            <element signature="e#4236#4284#0#HTML" expanded="true" />
+            <element signature="e#4419#4440#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/upload.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
             <element signature="e#168#213#0#HTML" expanded="true" />
             <element signature="e#224#249#0#HTML" expanded="true" />
@@ -883,10 +794,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/account.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="168">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#form#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
           </folding>
@@ -904,18 +816,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/platform/ManageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="405">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/platform/ChargeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
-            <element signature="e#466#511#0#HTML" expanded="true" />
-            <element signature="e#522#546#0#HTML" expanded="true" />
-            <element signature="e#1269#1293#0#HTML" expanded="true" />
-            <element signature="e#2235#2283#0#HTML" expanded="true" />
-            <element signature="e#2415#2436#0#HTML" expanded="true" />
-            <element signature="e#4236#4284#0#HTML" expanded="true" />
-            <element signature="e#4419#4440#0#HTML" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/platform/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="224" column="5" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="38" column="100" selection-start-line="38" selection-start-column="100" selection-end-line="38" selection-end-column="100" />
+          <folding>
+            <element signature="e#1295#1318#0#HTML" expanded="true" />
+            <element signature="e#1397#1422#0#HTML" expanded="true" />
+            <element signature="e#1482#1505#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

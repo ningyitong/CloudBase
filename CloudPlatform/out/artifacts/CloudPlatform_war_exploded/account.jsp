@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -14,8 +13,9 @@
 %>
 
 <div class="container" style="margin-left: 80px; margin-right: 80px">
-    <div style="margin-top: 80px">
-        <h3>Manage Your APP</h3>
+    <div style="margin-top: 120px">
+        <h3>Manage your APP</h3>
+        <hr>
     </div>
     <br>
     <div class="container_table">

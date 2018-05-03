@@ -32,8 +32,11 @@
         %>
         <div class="col-xs-4" style="margin-top:30px">
             <form method="post" action="ChargeServlet">
+                <input class="invisible_input" name="app_owner" value="<%=rset.getString("owner")%>" />
+                <input class="invisible_input" name="app_path" value="<%=rset.getString("path")%>" />
+                <input class="invisible_input" name="app_price" value="<%=rset.getString("price")%>" />
                 <div style="text-align:center">
-                    <button class="app_btn" type="submit" style="background:none" id="goApp_btn" onclick="return confirm('Are you sure you PAY for this application? This APP will COST you <%=rset.getString("price")%> peanuts!')" ><img class="app_image" src="<%=path %>/<%=icon %>" alt=""></button>
+                    <button class="app_btn" type="submit" style="background:none" formtarget="_blank" id="goApp_btn" onclick="return confirm('Are you sure you PAY for this application? This APP will COST you <%=rset.getString("price")%> peanuts!')" ><img class="app_image" src="<%=path %>/<%=icon %>" alt=""></button>
                 </div>
             </form>
         </div>
