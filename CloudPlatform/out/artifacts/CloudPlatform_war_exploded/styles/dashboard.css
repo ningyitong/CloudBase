@@ -1,0 +1,29 @@
+#nav-bar {
+    color: black;
+}
+
+.nav-text {
+    color: black;
+}
+
+.app-row {
+    margin-top: 100px;
+}
+
+.icon-bar {
+    background-color: black;
+}
+
+.app_btn {
+    max-height: 200px;
+    max-width: 200px;
+}
+.app_image {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.firstTitle {
+    margin-top: 180px;
+    padding-top: 100px;
+}

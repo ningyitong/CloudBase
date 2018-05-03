@@ -3,9 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <welcome-file-list>
-        <welcome-file>dashboard.jsp</welcome-file>
-    </welcome-file-list>
+    <!--DISPLAY NAME-->
+    <display-name>Chicken Dinner</display-name>
+
+    <!--SESSION TIME-->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <!--SERVLET-->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.platform.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.platform.LoginServlet</servlet-class>
@@ -25,11 +42,61 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>com.platform.LogoutServlet</servlet-class>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.platform.UploadServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>LogoutServlet</servlet-name>
-        <url-pattern>/LogoutServlet</url-pattern>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreditServlet</servlet-name>
+        <servlet-class>com.platform.CreditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreditServlet</servlet-name>
+        <url-pattern>/CreditServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>com.platform.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/ResetPasswordServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChargeServlet</servlet-name>
+        <servlet-class>com.platform.ChargeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChargeServlet</servlet-name>
+        <url-pattern>/ChargeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>com.platform.AccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/AccountServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManageServlet</servlet-name>
+        <servlet-class>com.platform.ManageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManageServlet</servlet-name>
+        <url-pattern>/ManageServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--WELCOME PAGE-->
+    <welcome-file-list>
+        <welcome-file>dashboard.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

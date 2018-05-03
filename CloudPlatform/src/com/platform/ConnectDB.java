@@ -13,9 +13,9 @@ public class ConnectDB {
         try{
 
             // This is for using MySQL
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/Users";
-			conn = DriverManager.getConnection(url, "root","");
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/Users?useSSL=false";
+            conn = DriverManager.getConnection(url, "root", "0908");
 
             // This is for using SQLite
 //            Class.forName("org.sqlite.JDBC");

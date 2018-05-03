@@ -1,6 +1,5 @@
 package com.platform;
 
-
 public class User {
     private int id;
     private String username;
@@ -9,6 +8,7 @@ public class User {
     private String question;
     private String answer;
     private int balance;
+    private int admin;
 
     public int getId() {
         return id;
@@ -58,4 +58,13 @@ public class User {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
+    public int getAdmin() {
+        return admin;
+    }
+    public void setAdmin(int admin) {
+        this.admin = admin;
+    }
+
+
 }

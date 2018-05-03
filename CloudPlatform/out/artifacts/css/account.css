@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+
+#accountSettings {
+	min-width:1000px;
+	width:100%;
+	padding-top:200px;
+	padding-bottom:40px;
+	padding-left:0px;
+	font-family:open sans;
+	font-size:18px;
+	background:#666666;
+}
+
+#user_icon {
+	background:white;
+	width:100px;
+	height:100px;
+}
+
+#user_info_account {
+	font-weight:lighter;
+	font-family:open sans;
+	padding-left:0px;
+	color:white;
+}
+
+#changeUserInfoInput {
+	border-radius:10px;
+	-moz-border-radius:10px;
+	border-style:solid;
+	border-color:#b2b2b2;
+	width:250px;
+	height:44px;
+	margin-top:20px;
+	font-size:16px; 
+	font-family:open sans; 
+	font-weight:100;
+	padding-left:10px;
+}
+#newPassword {
+	border-radius:10px;
+	-moz-border-radius:10px;
+	border-style:solid;
+	border-color:#b2b2b2;
+	width:250px;
+	height:44px;
+	margin-top:20px;
+	font-size:16px; 
+	font-family:open sans; 
+	font-weight:100;
+	padding-left:10px;
+}
+#reNewPassword {
+	border-radius:10px;
+	-moz-border-radius:10px;
+	border-style:solid;
+	border-color:#b2b2b2;
+	width:250px;
+	height:44px;
+	margin-top:20px;
+	font-size:16px; 
+	font-family:open sans; 
+	font-weight:100;
+	padding-left:10px;
+}
+#reSetPasswordBtn {
+	background-color:transparent; 
+	border-radius:5px;
+	-moz-border-radius:10px;
+	border:1px solid black;
+		
+	font-size:12px; 
+	font-family:open Sans;
+	color:black;
+	-webkit-transition-duration:0.4s; /* Safari */
+    transition-duration:0.4s;
+}
+#reSetPasswordBtn:hover {
+	background-color:black;
+    color:white;
+}
+
+#changeUserInfoBtn {
+	background-color:transparent; 
+	border-radius:5px;
+	-moz-border-radius:10px;
+	border:1px solid black;
+		
+	font-size:12px; 
+	font-family:open Sans;
+	color:black;
+	-webkit-transition-duration:0.4s; /* Safari */
+    transition-duration:0.4s;
+}
+#changeUserInfoBtn:hover {
+	background-color:black;
+    color:white;
+}
+
+#account_icon {
+	width:40px;
+	heigth:40px;
+}
+
+.radio-toolbar input[type="radio"] {
+	display: none;
+}
+.radio-toolbar label {
+	padding:5px 11px;
+	display: inline-block;
+	background-color: #c4c4c4;
+	border-radius:5px;
+	-moz-border-radius:10px;
+	font-family: Open Sans;
+	font-size: 16px;
+	cursor: pointer;
+	color:white;
+}
+.radio-toolbar input[type="radio"]:checked+label {
+	background-color:#666666;
+}
+.radio-toolbar label:hover {
+	background-color:#666666;
+    color:white;
+}
+
+#achievementView {
+	min-width:1000px;
+}
+
+#progress_bar {
+	
+}

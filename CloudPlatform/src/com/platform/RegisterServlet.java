@@ -12,14 +12,14 @@ public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String password = MD5.transMD5(request.getParameter("password"));
         String email = request.getParameter("email");
         String question = request.getParameter("question");
         String answer = request.getParameter("answer");
 
         UserDao userDao = new UserDao();
         if (username != null && !username.isEmpty()) {
-            if (userDao.sameUsername(username)) {
+            if (userDao.isUsernameExists(username)) {
                 User user = new User();
                 user.setUsername(username);
                 user.setPassword(password);
@@ -29,10 +29,10 @@ public class RegisterServlet extends HttpServlet {
 
                 userDao.saveUser(user);
 
-                String script = "<script>alert('Registration Successful!');location.href='login.jsp'</script>";
+                String script = "<script>alert('Registration Successful!');location.href='dashboard.jsp'</script>";
                 response.getWriter().println(script);
             } else {
-                String script = "<script>alert('Register failed! The USERNAME is already existed.');location.href='register.jsp'</script>";
+                String script = "<script>alert('Register failed! The USERNAME is already existed.');location.href='dashboard.jsp'</script>";
                 response.getWriter().println(script);
             }
         }
