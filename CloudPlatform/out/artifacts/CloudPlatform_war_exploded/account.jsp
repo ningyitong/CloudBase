@@ -51,7 +51,7 @@
                 try{
                     connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
                     statement=connection.createStatement();
-                    String sql ="select * from cb_app where owner = '" + user + "'";
+                    String sql ="select * from cloud_app where owner = '" + user + "'";
                     resultSet = statement.executeQuery(sql);
                     while(resultSet.next()) {
             %>

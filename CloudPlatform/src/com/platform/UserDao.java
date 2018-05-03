@@ -10,7 +10,7 @@ public class UserDao {
     // save user to DB
     public void saveUser (User user) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "insert into cb_user(username,password,email,question,answer,balance) values(?,?,?,?,?,1000)";
+        String sql = "insert into cloud_user(username,password,email,question,answer,balance) values(?,?,?,?,?,1000)";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
 
@@ -35,7 +35,7 @@ public class UserDao {
     // validate username cannot be duplicated
     public boolean isUsernameExists (String username) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_user where username = ?";
+        String sql = "select * from cloud_user where username = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
@@ -59,7 +59,7 @@ public class UserDao {
     public User login (String username, String password) {
         User user = null;
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_user where username = ? and password = ?";
+        String sql = "select * from cloud_user where username = ? and password = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
@@ -92,7 +92,7 @@ public class UserDao {
     public User userInfo (String username) {
         User user = null;
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_user where username = ?";
+        String sql = "select * from cloud_user where username = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
@@ -126,7 +126,7 @@ public class UserDao {
     public void creditBalance(String username, int balance){
         Connection conn = ConnectDB.getConnection();
 
-        String sql = "update cb_user set balance=? where username=?";
+        String sql = "update cloud_user set balance=? where username=?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, balance);
@@ -144,7 +144,7 @@ public class UserDao {
     // verify user info for reset password
     public boolean verifyUser (String username, String question, String answer) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_user where username = ? and question = ? and answer = ?";
+        String sql = "select * from cloud_user where username = ? and question = ? and answer = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
 
@@ -170,7 +170,7 @@ public class UserDao {
     // change password
     public void resetPass (String password, String username) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "update cb_user set password=? where username=?";
+        String sql = "update cloud_user set password=? where username=?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, password);
@@ -187,7 +187,7 @@ public class UserDao {
 
     public boolean userExists (int id) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_user where id = ?";
+        String sql = "select * from cloud_user where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
@@ -210,7 +210,7 @@ public class UserDao {
     // delete user function
     public void deleteUser(int id) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "delete from cb_user where id=?";
+        String sql = "delete from cloud_user where id=?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);

@@ -56,7 +56,7 @@
                 try{
                     connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
                     statement=connection.createStatement();
-                    String sql ="select * from cb_user";
+                    String sql ="select * from cloud_user";
                     resultSet = statement.executeQuery(sql);
                     while(resultSet.next()) {
             %>
@@ -103,8 +103,8 @@
                 try{
                     connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
                     statement=connection.createStatement();
-                    String sql ="select * from cb_app";
-                    String delUser = "delete from cb_user where id =";
+                    String sql ="select * from cloud_app";
+                    String delUser = "delete from cloud_user where id =";
                     resultSet = statement.executeQuery(sql);
                     while(resultSet.next()) {
             %>

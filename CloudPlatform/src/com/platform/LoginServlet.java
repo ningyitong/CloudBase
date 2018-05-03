@@ -13,7 +13,8 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        String password = MD5.transMD5(request.getParameter("password"));
+//        String password = MD5.transMD5(request.getParameter("password"));
+        String password = request.getParameter("password");
         UserDao userDao = new UserDao();
         HttpSession session = request.getSession();
 

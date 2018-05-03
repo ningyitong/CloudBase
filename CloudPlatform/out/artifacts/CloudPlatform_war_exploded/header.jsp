@@ -7,7 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="styles/dashboard.css">
         <link rel="stylesheet" type="text/css" href="styles/logpage.css">
-        <link rel="stylesheet" type="text/css" href="styles/upload.css">
+		<link rel="stylesheet" type="text/css" href="styles/upload.css">
+		<link rel="stylesheet" type="text/css" href="styles/chatting.css">
 
 		<!-- Bootstrap core CSS -->
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +23,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/upload.js"></script>
         <script type="text/javascript" src="js/user.js"></script>
-        <script type="text/javascript" src="js/dashboard.js"></script>
+		<script type="text/javascript" src="js/dashboard.js"></script>
+		<script type="text/javascript" src="js/chatting.js"></script>
 	</head>
 	<body>
 	<nav class="navbar navbar-custom navbar-fixed-top" id="nav-bar" style="background: white">

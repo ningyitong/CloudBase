@@ -10,7 +10,7 @@ public class AppDao {
     // save app info to database
     public void SaveApp (App app) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "insert into cb_app(title,icon,description,path,owner,price) values(?,?,?,?,?,?)";
+        String sql = "insert into cloud_app(title,icon,description,path,owner,price) values(?,?,?,?,?,?)";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
 
@@ -34,7 +34,7 @@ public class AppDao {
     // if app title exists, prevent upload
     public boolean SameAppname (String title) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_app where title = ?";
+        String sql = "select * from cloud_app where title = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, title);
@@ -57,7 +57,7 @@ public class AppDao {
     // delete app function
     public void deleteApp(int id) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "delete from cb_app where id=?";
+        String sql = "delete from cloud_app where id=?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
@@ -73,7 +73,7 @@ public class AppDao {
 
     public boolean appExists (int id) {
         Connection conn = ConnectDB.getConnection();
-        String sql = "select * from cb_app where id = ?";
+        String sql = "select * from cloud_app where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);

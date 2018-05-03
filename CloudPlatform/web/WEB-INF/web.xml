@@ -95,6 +95,15 @@
         <url-pattern>/ManageServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ChattingServlet</servlet-name>
+        <servlet-class>com.platform.ChattingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChattingServlet</servlet-name>
+        <url-pattern>/ChattingServlet</url-pattern>
+    </servlet-mapping>
+
     <!--WELCOME PAGE-->
     <welcome-file-list>
         <welcome-file>dashboard.jsp</welcome-file>
