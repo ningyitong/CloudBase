@@ -10,8 +10,7 @@ function login(form) {
 }
 
 function registration(form) {
-    var date =/^([0-3][0-9])\/([0-1][0-9])\/([1-2][0-9][0-9][0-9])$/;
-    if (form.username.value == "") {
+    if (form.username.value.equals("")) {
         alert("Username should not be empty!");
         return false;
     }
@@ -19,7 +18,7 @@ function registration(form) {
         alert("Username length should less than 20!");
         return false;
     }
-    if (form.password.value == "") {
+    if (form.password.value.equals("")) {
         alert("Password should not be empty!");
         return false;
     }
@@ -27,15 +26,15 @@ function registration(form) {
         alert("Password should more than 3!");
         return false;
     }
-    if (form.password.value !=form.repassword.value) {
+    if (form.password.value !==form.repassword.value) {
         alert("Please input same password!");
         return false;
     }
-    if (form.email.value == "") {
+    if (form.email.value.equals("")) {
         alert("Email Address should not be empty!");
         return false;
     }
-    if (form.answer.value == "") {
+    if (form.answer.value.equals("")) {
         alert("Answer should not be empty!");
         return false;
     }
@@ -43,26 +42,22 @@ function registration(form) {
         alert("Answer length should no more than 30 letters!");
         return false;
     }
-    if (form.question.value == "2" && date.test(form.answer.value)) {
-        alert("Wrong date format!");
-        return false;
-    }
 }
 
 function resetPass(form) {
-    if (form.username.value == "") {
+    if (form.username.value.equals("")) {
         alert("Username should not be empty!");
         return false;
     }
-    if (form.password.value == "") {
+    if (form.password.value.equals("")) {
         alert("Password should not be empty!");
         return false;
     }
-    if (form.password.value !=form.repassword.value) {
+    if (form.password.value !== form.repassword.value) {
         alert("You should input the same password!");
         return false;
     }
-    if (form.answer.value == "") {
+    if (form.answer.value.equals("")) {
         alert("Answer should not be empty!");
         return false;
     }

@@ -21,10 +21,7 @@ public class UserDao {
             ps.setString(5, user.getAnswer());
 
             ps.executeUpdate();
-
             ps.close();
-            System.out.println("Save user");
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -113,7 +110,6 @@ public class UserDao {
             }
             rs.close();
             ps.close();
-            return user;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

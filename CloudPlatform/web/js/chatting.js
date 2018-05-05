@@ -1,31 +1,31 @@
 //face icons
-function InitFace() {
-    var strHTML = "";
-    for (var i = 1; i <= 10; i++) {
-        strHTML += "![](Face/" + i + ".gif )";
-    }
-    $("#divFace").html(strHTML);
-}
-
-
-$(function() {
-
-    InitFace();
-
-    $("table tr td img").click(function() { //表情图标单击事件
-        var strContent = $("#txtContent").val() + "<:" + this.id + ":>";
-        $("#txtContent").val(strContent);
-
-    })
-});
-//face icons
-function InitFace() {
-    var strHTML = "";
-    for (var i = 1; i <= 10; i++) {
-        strHTML += "![](Face/" + i + ".gif )";
-    }
-    $("#divFace").html(strHTML);
-}
+// function InitFace() {
+//     var strHTML = "";
+//     for (var i = 1; i <= 10; i++) {
+//         strHTML += "![](Face/" + i + ".gif )";
+//     }
+//     $("#divFace").html(strHTML);
+// }
+//
+//
+// $(function() {
+//
+//     InitFace();
+//
+//     $("table tr td img").click(function() {
+//         var strContent = $("#txtContent").val() + "<:" + this.id + ":>";
+//         $("#txtContent").val(strContent);
+//
+//     })
+// });
+// //face icons
+// function InitFace() {
+//     var strHTML = "";
+//     for (var i = 1; i <= 10; i++) {
+//         strHTML += "![](Face/" + i + ".gif )";
+//     }
+//     $("#divFace").html(strHTML);
+// }
 
 //get message content
 //data is the message content data
@@ -65,7 +65,7 @@ function AutoUpdContent() {
 function SendContent(content) {
     $.ajax({
         type: "POST",
-        url: "chat",
+        url: "ChattingServlet",
         data: "action=SendContent&d=" + new Date() + "&content=" + content,
         success: function(data) {
             //alert(data);
@@ -82,7 +82,7 @@ function SendContent(content) {
 }
 
 $(function() {
-    InitFace();
+    // InitFace();
     GetMessageList();
     GetOnLineList();
 

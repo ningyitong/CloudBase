@@ -1,12 +1,11 @@
 <jsp:include page="header.jsp"/>
 
-<%--<%--%>
-    <%--if (session.getAttribute("user")==null)--%>
-    <%--{--%>
-        <%--response.sendRedirect("dashboard.jsp");--%>
-    <%--}--%>
-<%--%>--%>
-
+<%
+    if (session.getAttribute("user")==null)
+    {
+        response.sendRedirect("dashboard.jsp");
+    }
+%>
 
 <div id="divMain">
     <div class="divtop" style="margin-top: 120px">

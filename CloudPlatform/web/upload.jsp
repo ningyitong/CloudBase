@@ -18,7 +18,7 @@
         <br>
         <div class="row" style="margin-top: 15px">
             <div class="col-xs-4 text-left">
-                <p2>Choose Icon:</p2>
+                <h5>Select Icon:</h5>
             </div>
             <div class="col-xs-8 text-right">
                 <input type="file" id="icon" name="icon"/> <br/>
@@ -30,7 +30,7 @@
         <br>
         <div class="row">
             <div class="col-xs-4 text-left">
-                <p2>Choose APP:</p2>
+                <h5>Select APP:</h5>
             </div>
             <div class="col-xs-8 text-right">
                 <input type="file" id="upload" name="file" required/> <br/>

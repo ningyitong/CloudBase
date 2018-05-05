@@ -26,10 +26,6 @@
     font-size:13px;
     font-weight: lighter;
     margin-top: 15px;
-    color: gray;
-    border: white;
-    background: gainsboro;
-    margin-top: 15px;
 }
 
 .log_btn {
@@ -58,13 +54,31 @@
     border-radius:10px;
     -moz-border-radius:10px;
     border:1px solid black;
+    width: 180px;
+    height: 25px;
+    font-size: 10px;
+    color:black;
+    -webkit-transition-duration:0.4s;
+    transition-duration:0.4s;
+}
+#modalCloseBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+.upload_btn_modal {
+    background-color:transparent;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    border:1px solid black;
+    width: 180px;
     height: 25px;
     font-size: 10px;
     color:black;
     -webkit-transition-duration:0.4s; /* Safari */
     transition-duration:0.4s;
 }
-#modalCloseBtn:hover {
+.upload_btn_modal:hover {
     background-color: black;
     color: white;
 }

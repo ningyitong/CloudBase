@@ -41,17 +41,21 @@ public class ChattingServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         //base on action to do things
 
-        if("ChatList".equals(strAction)){
+        if(strAction.equals("Login")) {
+            String res = UserLogin(strName, strPass, session);
+            out.print(res);
+            out.close();
+        } else if (strAction.equals("ChatList")){
             String result1=AllChatList();
             out.println(result1);
             out.close();
 
-        }else if("OnLineList".equals(strAction)){
+        }else if(strAction.equals("OnLineList")){
             String result2=GetOnlineUserList(session);
             out.println(result2);
             out.close();
 
-        }else if("SendContent".equals(strAction)){
+        }else if(strAction.equals("OnLineList")){
             Boolean res2=AddSendContent(strContent,session);
             String result="";
             if(res2){
@@ -61,15 +65,54 @@ public class ChattingServlet extends HttpServlet {
             }
             out.println(result);
             out.close();
+        }else if(strAction.equals("Logout")){
+            boolean res3=Logout(session);
+            out.println(res3);
+            out.close();
         }
-
     }
+
+    //check user login
+    public String UserLogin(String strName,String strPass,HttpSession session){
+        String flag = "no";
+        String username = (String) session.getAttribute("username");
+        if (!username.equals(""))//check session
+        {
+            if (OnLineUserList.size() == 0)//check use if empty
+            {
+                OnLineUserList = new ArrayList<String>();// in use is empty , init the arraylist
+            }
+            OnLineUserList.add(strName);//add use to the arrayList
+            session.setAttribute("LOGINUSER",strName);//session to set user info
+            flag = "ok";
+        }
+        return flag;
+    }
+
+    //logout
+    public boolean Logout(HttpSession session){
+        if(null==session.getAttribute("LOGINUSER")){
+            return false;
+        }
+        String name = session.getAttribute("LOGINUSER").toString();
+        session.removeAttribute("LOGINUSER");
+        if(OnLineUserList.size()!=0){
+            for(int i=0;i<OnLineUserList.size();i++) {
+                if(name.equals(OnLineUserList.get(i))) {
+                    OnLineUserList.remove(i);
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
     //get chat content
     public String AllChatList(){
         String result="";
         if (strSendConentList.size() == 0)
         {
-            result = "日前还没有找到聊天记录";
+            result = "Empty board, say hello to your friends!";
         }
         else
         {
@@ -78,8 +121,8 @@ public class ChattingServlet extends HttpServlet {
                 result += it.next() + "</br>";
             }
         }
-        result= result.replace("<:", "<img src='Face/");
-        result=result.replace(":>", ".gif '/>");
+//        result= result.replace("<:", "<img src='Face/");
+//        result=result.replace(":>", ".gif '/>");
         return result;
     }
 
@@ -88,7 +131,7 @@ public class ChattingServlet extends HttpServlet {
         String result="";
         if (OnLineUserList.size()==0)
         {
-            result="暂时没有人在线";
+            result="No one online currently.";
         }else{
             Iterator<String> it=OnLineUserList.iterator();
             while(it.hasNext()){

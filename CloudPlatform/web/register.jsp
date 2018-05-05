@@ -23,9 +23,9 @@
                     <div>
                         <input type="email" class="log_input" name="email" id="input_email" placeholder=" Email Address" required>
                     </div>
-                    <select name="question" class="log_select" id="dropdown_btn">
+                    <select name="question" class="log_select" id="dropdown_btn" style="color: black; background: transparent">
                         <option value="1">Where were you born?</option>
-                        <option value="2">When is your Birthday (ddmmyyyy)?</option>
+                        <option value="2">When is your Birthday?</option>
                         <option value="3">What is your Surname?</option>
                     </select>
                     <div>

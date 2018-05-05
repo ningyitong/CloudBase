@@ -13,21 +13,18 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-//        String password = MD5.transMD5(request.getParameter("password"));
-        String password = request.getParameter("password");
+        String password = MD5.transMD5(request.getParameter("password"));
         UserDao userDao = new UserDao();
         HttpSession session = request.getSession();
 
         User user = userDao.login(username, password);
         if (user != null) {
             request.getSession().setAttribute("user", user);
-//            request.getSession().setAttribute("username", username);
             // set session data
             session.setAttribute("username", username);
             session.setAttribute("admin", userDao.userInfo(username).getAdmin());
             session.setAttribute("email", userDao.userInfo(username).getEmail());
-
-            System.out.println(userDao.userInfo(username).getAdmin() + " " + userDao.userInfo(username).getEmail());
+            session.setAttribute("balance", userDao.userInfo(username).getBalance());
 
             // set up cookie
             Cookie ck = new Cookie("uname", username);

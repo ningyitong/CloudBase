@@ -34,11 +34,11 @@ function ValidateUploadForm(Form) {
                     }
                 }
                 if (!blnValid) {
-                    alert("Sorry, " + FileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                    alert("Sorry, we don't accept this kind type of file: " + FileName + ". The valid extensions are: " + _validFileExtensions.join(", "));
                     return false;
                 }
             } else {
-                alert("Empty file!");
+                alert("Please select your APP ICON or APP FILE!");
                 return false;
             }
         }

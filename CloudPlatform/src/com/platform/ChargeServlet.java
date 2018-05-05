@@ -1,7 +1,6 @@
 package com.platform;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class ChargeServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
         if (user == null) {
@@ -55,6 +54,9 @@ public class ChargeServlet extends HttpServlet {
             appUser.userInfo(appUser_name);
             appUser.creditBalance(appUser_name, appUser_account.getBalance() - app_price);
 
+            // Refresh user balance
+            UserDao userDao = new UserDao();
+            session.setAttribute("balance", userDao.userInfo(appUser_name).getBalance());
             // Go to APP after debit process
             String appLink = app_path.substring(0, app_path.length() - 4);
             response.sendRedirect("/" + appLink + "/");

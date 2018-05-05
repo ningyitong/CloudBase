@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/upload.css">
 		<link rel="stylesheet" type="text/css" href="styles/chatting.css">
 
-		<!-- Bootstrap core CSS -->
+		<%--<!-- Bootstrap core CSS -->--%>
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Bootstrap theme -->
 		<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -47,17 +47,14 @@
 				<ul class="px-nav-actions nav navbar-nav">
 					<li><a href="#" class="nav-text">
 						<script>
-                            var curTime = new Date();
-                            var curHour = curTime.getHours(0);
-                            /* hour is before noon */
-                            if ( curHour < 12 ) {
-                                document.write("Good Morning, ");
-                            } else if ( curHour >= 12 && curHour <= 17 ) {
-                                document.write("Good Afternoon, ");
-                            } else if ( curHour > 17 && curHour <= 24 ) {
-                                document.write("Good Evening, ");
+                            var realTime = new Date();
+                            var hour = realTime.getHours(0);
+                            if ( hour >=5 && hour <= 11 ) {
+                                document.write("Morning, ");
+                            } else if ( hour >= 12 && hour <= 17 ) {
+                                document.write("Afternoon, ");
                             } else {
-                                document.write("I'm not sure what time it is! ");
+                                document.write("Evening, ");
                             }
 						</script>
 						<%=session.getAttribute("username")%>!
@@ -68,7 +65,7 @@
                     <li><a href="admin.jsp" id="AdminHidden" class="nav-text"><span class="glyphicon glyphicon-king"></span> Admin</a></li>
 					<li><a id="login" data-toggle="modal" data-target="#signInModal" class="nav-text"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
                     <li><a id="signup" data-toggle="modal" data-target="#signUpModal" class="nav-text"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
-					<li><a href="LogoutServlet" id="logout" class="nav-text" onclick="return confirm('Are you sure you want to LOG OUT?')" ><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+					<li><a href="LogoutServlet" id="logout" class="nav-text" onclick="return confirm('Log out from the platform and apps?')" ><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
             <!-- hidden admin button -->
@@ -91,7 +88,7 @@
             </script>
 		</div>
 	</nav>
-	<jsp:include page="login.jsp"/>
+	<jsp:include page="loginModal.jsp"/>
     <jsp:include page="register.jsp"/>
     <jsp:include page="resetPass.jsp"/>
     <jsp:include page="uploadModal.jsp"/>

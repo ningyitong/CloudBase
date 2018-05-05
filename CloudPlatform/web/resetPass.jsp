@@ -12,13 +12,13 @@
             <div class="modal-body">
                 <form action="ResetPasswordServlet" class="log_form" method="post" onsubmit="return resetPass(this);">
                     <div>
-                        <input type="text" class="log_input" name="username" placeholder=" Input your username  *" id="input" required/>
+                        <input type="text" class="log_input" name="username" placeholder=" Type your username  *" id="input" required/>
                     </div>
 
                     <div>
-                        <select name="question" class="log_select" id="dropdown_btn">
+                        <select name="question" class="log_select" id="dropdown_btn" style="color: black; background: transparent">
                             <option value="1">Where were you born?</option>
-                            <option value="2">When is your Birthday (ddmmyyyy)?</option>
+                            <option value="2">When is your Birthday?</option>
                             <option value="3">What is your Surname?</option>
                         </select>
                     </div>

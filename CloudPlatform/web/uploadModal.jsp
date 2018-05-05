@@ -13,7 +13,7 @@
 
             </div>
             <div class="modal-footer" style="text-align:center;">
-                <a type="button" href="upload.jsp" class="btn btn-default">Upload</a>
+                <button href="upload.jsp" class="upload_btn_modal">Upload</button>
                 <button type="button" class="btn btn-default" id="modalCloseBtn" data-dismiss="modal">Close</button>
             </div>
         </div>

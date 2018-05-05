@@ -26,7 +26,6 @@ public class UploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final int INCREASE_CREDITS = 100;
     private static String fileName = "";
-    private static String fileExtension= "";
     private static String path = "";
     private static String icon = "";
 
@@ -107,10 +106,10 @@ public class UploadServlet extends HttpServlet {
             for (Part part : request.getParts()) {
                 fileName = extractFileName(part);
                 if (fileName != null) {
-                    fileExtension = getFileExtension(fileName);
+                    String fileExtension = getFileExtension(fileName);
 
                     if (fileExtension.equals("jar") || fileExtension.equals("war")) {
-                        path = owner + fileName;
+                        path = title + "." + fileExtension;
                         part.write(tomcatPath + File.separator + path);
 
                     } else {
@@ -119,25 +118,32 @@ public class UploadServlet extends HttpServlet {
                     }
                 }
             }
+
+            // save App info to database
+            String pathWithoutExtenson = (owner + fileName).substring(0, (owner + fileName).length() - 4);
+
             String sourcePath = tomcatPath + File.separator + path;
-            String targetPath = tomcatPath;
-            jarExtractor(sourcePath, targetPath);
+//            String targetPath = tomcatPath;
+            jarExtractor(sourcePath, tomcatPath);
 
             // check if app exists
-            Path app_path = Paths.get(path);
+            Path app_path = Paths.get(tomcatPath + File.separator + title);
             File file_icon = new File(tomcatPath + File.separator + icon);
 
             // move app icon to app folder
             if (Files.exists(app_path)) {
                 file_icon.renameTo(new File(app_path + File.separator + icon));
             }
+            icon = app_path + File.separator + icon;
 
-            // save App info to database
-            String pathWithoutExtenson = (owner + fileName).substring(0, (owner + fileName).length() - 4);
             setAppInfo(title, pathWithoutExtenson, description, icon, owner, price);
 
             // increase credits of the app owner
             addCredits(username);
+
+            // Refresh user balance
+            UserDao userDao = new UserDao();
+            session.setAttribute("balance", userDao.userInfo(username).getBalance());
 
             String script = "<script>alert('Upload App Successful! Enjoy your 100 credits reward!');location.href='dashboard.jsp'</script>";
             response.getWriter().println(script);

@@ -2,9 +2,7 @@ package com.platform;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet(name = "RegisterServlet")
@@ -16,6 +14,8 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String question = request.getParameter("question");
         String answer = request.getParameter("answer");
+
+        HttpSession session = request.getSession();
 
         UserDao userDao = new UserDao();
         if (username != null && !username.isEmpty()) {
@@ -29,6 +29,17 @@ public class RegisterServlet extends HttpServlet {
 
                 userDao.saveUser(user);
 
+                // create session
+                session.setAttribute("username", username);
+                session.setAttribute("admin", 0);
+                session.setAttribute("email", email);
+                session.setAttribute("balance", 1000);
+
+                // create cookie
+                Cookie ck = new Cookie("uname", username);
+                ck.setPath("/");
+                ck.setMaxAge(3000);
+                response.addCookie(ck);
                 String script = "<script>alert('Registration Successful!');location.href='dashboard.jsp'</script>";
                 response.getWriter().println(script);
             } else {

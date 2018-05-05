@@ -1,69 +1,94 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
- --%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-<%@page import ="javax.sql.*" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+
 <jsp:include page="header.jsp"/>
-<%
-    String username = (String)session.getAttribute("username");
-%>
-<div class="container">
-    <div style="margin-top: 120px">
-        <h3>Online Chatting</h3>
-        <a href="chatting.jsp" target="_blank" class="log_btn">Chatting With Friends</a>
-        <hr>
+
+<% if (session.getAttribute("username") != null) { %>
+    <div class="row" style="margin-top: 120px" id="dashboard_showInfo">
+        <div class="col-sm-6" style="text-align: center">
+            <h3>
+                <a href="chatting.jsp" target="_blank" class="log_btn">Chatting With Friends</a>
+            </h3>
+        </div>
+        <div class="col-sm-6" style="text-align: center">
+            <h3>
+                Credits: <%=session.getAttribute("balance")%>
+            </h3>
+        </div>
     </div>
-</div>
+<% } %>
 
+<hr>
 <div class="container">
+    <%
+        String driverName = "com.mysql.jdbc.Driver";
+        String connectionUrl = "jdbc:mysql://localhost:3306/";
+        String dbName = "Users?useSSL=false";
+        String userId = "root";
+        String password = "1111";
 
-    <div class="app-row">
+        try {
+            Class.forName(driverName);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        Connection connection = null;
+        Statement statement;
+        ResultSet resultSet;
+    %>
+    <div class="row">
         <%
-            try (
-                    java.sql.Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Users?useSSL=false", "root", "11111111");
-                    Statement stmt = conn.createStatement();
-            ) {
-                String strSelect = "select * from cloud_app";
-                String title = "";
-                String icon = "";
-                String path = "";
-                ResultSet rset = stmt.executeQuery(strSelect);
-                while(rset.next()) {   // Move the cursor to the next row
-                    title = (String) rset.getString("title");
-                    icon = (String) rset.getString("path") + "/" + (String) rset.getString("icon");
-                    path = (String) rset.getString("path");
+        try{
+            connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+            statement=connection.createStatement();
+            String sql ="select * from cloud_app";
+            String title = "";
+            String icon = "";
+            String path = "";
+            resultSet = statement.executeQuery(sql);
+            while(resultSet.next()) {
+                title = (String) resultSet.getString("title");
+                icon = (String) resultSet.getString("icon");
+                path = (String) resultSet.getString("path");
+                icon = "images/appDefault.png";
         %>
+
         <div class="col-xs-4" style="margin-top:30px">
             <form method="post" action="ChargeServlet">
-                <input class="invisible_input" name="app_owner" value="<%=rset.getString("owner")%>" />
-                <input class="invisible_input" name="app_path" value="<%=rset.getString("path")%>" />
-                <input class="invisible_input" name="app_price" value="<%=rset.getString("price")%>" />
+                <input class="invisible_input" name="app_owner" value="<%=resultSet.getString("owner")%>" />
+                <input class="invisible_input" name="app_path" value="<%=resultSet.getString("path")%>" />
+                <input class="invisible_input" name="app_price" value="<%=resultSet.getString("price")%>" />
                 <div style="text-align:center">
-                    <button class="app_btn" type="submit" style="background:none" formtarget="_blank" id="goApp_btn" onclick="return confirm('Are you sure you PAY for this application? This APP will COST you <%=rset.getString("price")%> peanuts!')" ><img class="app_image" src="<%=icon %>" alt=""></button>
+                    <button class="app_btn" type="submit" formtarget="_blank" id="goApp_btn" onclick="return confirm('Opening : <%=resultSet.getString("title")%>... It is <%=resultSet.getString("price")%> peanuts per use!')" ><img class="app_image" src="<%=icon %>" alt=""></button>
                 </div>
             </form>
         </div>
 
         <%
                 }
-            } catch(Exception ex) {
-                ex.printStackTrace();
+            } catch (Exception e) {
+            e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    try {
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         %>
 
-
-        <div class="col-xs-4" style="margin-top:30px" id="addApp_col">
+        <div class="col-xs-4" style="margin-top:30px; text-align: center" id="addApp_col">
             <div style="text-align:center">
-                <button class="app_btn" style="background: none" data-toggle="modal" data-target="#uploadInstruction"><img class="app_image" src="images/addApp.png" alt=""></button>
+                <button class="app_btn" data-toggle="modal" data-target="#uploadInstruction">
+                    <img class="app_image" src="images/upload_app.png" alt="" style="max-width: 100px; max-height: 100px">
+                </button>
             </div>
         </div>
     </div>
-
+    <hr style="padding-bottom: 200px">
 </div>
-
 
 <jsp:include page="footer.jsp"/>

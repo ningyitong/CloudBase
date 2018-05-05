@@ -25,6 +25,10 @@ public class LogoutServlet extends HttpServlet {
         User user = (User)session.getAttribute("user");
         if (user != null) {
             session.removeAttribute("user");
+            session.removeAttribute("username");
+            session.removeAttribute("email");
+            session.removeAttribute("balance");
+
             String script = "<script>alert('Log out Successful!');location.href='dashboard.jsp'</script>";
             response.getWriter().println(script);
         }
